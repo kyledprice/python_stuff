@@ -29,7 +29,9 @@ class BinarySearchSet:
             high_index = len(self.base_array) - 1
             # When the indices cross, you have the right index
             while low_index < high_index:
-                middle = low_index + (high_index - low_index) / 2
+                middle = low_index + ((high_index - low_index) / 2)
+                # if (high_index - low_index + 1) % 2 == 0:
+                #     middle += 1
                 # If the item is found, return false
                 if item == self.base_array[middle]:
                     return False
@@ -73,14 +75,15 @@ bss.add(6)
 print(bss.base_array)
 bss.add(7)
 print(bss.base_array)
-
+#
 bss.add(-12)
 print(bss.base_array)
-bss.add(-12)
-print(bss.base_array)
+# bss.add(-12)
+# print(bss.base_array)
 bss.add(0)
 print(bss.base_array)
-bss.add(123)
-print(bss.base_array)
+# bss.add(123)
+# print(bss.base_array)
+
 
 
